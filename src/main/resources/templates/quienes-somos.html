@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quienes Somos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #a9dcff; /* Cambia el color de fondo si es necesario */
+        }
+        
+        .footer {
+            background-color: #44b3ff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            height: 100px;
+            width: 100%;
+            bottom: 0;
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Hospital Management</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/habitaciones">Habitaciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/quienes-somos">Quienes somos</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="register">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signin">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Quienes Somos Section -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Quienes Somos</h1>
+        <p>En Hospital XYZ, nos comprometemos a ofrecer atención médica de alta calidad y compasiva. Nuestra misión es mejorar la salud y el bienestar de nuestra comunidad mediante servicios accesibles y de confianza.</p>
+
+        <h2>Nuestra Historia</h2>
+        <p>Fundado en 1990, Hospital XYZ ha crecido hasta convertirse en un centro médico integral, ofreciendo una variedad de servicios especializados. Desde nuestros inicios, hemos estado dedicados a la salud y bienestar de nuestros pacientes.</p>
+
+        <h2>Nuestra Misión</h2>
+        <p>Nuestra misión es proporcionar atención centrada en el paciente, donde la calidad y la compasión son nuestras prioridades. Creemos en empoderar a nuestros pacientes para que tomen decisiones informadas sobre su salud.</p>
+
+        <h2>Valores</h2>
+        <ul>
+            <li><strong>Compasión:</strong> Tratamos a cada paciente con dignidad y respeto.</li>
+            <li><strong>Integridad:</strong> Actuamos con honestidad y transparencia.</li>
+            <li><strong>Excelencia:</strong> Buscamos la mejora continua en nuestros servicios.</li>
+            <li><strong>Colaboración:</strong> Trabajamos en equipo para lograr los mejores resultados.</li>
+        </ul>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <footer class="footer">
+        <p>&copy; 2024 Hospital Management System. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

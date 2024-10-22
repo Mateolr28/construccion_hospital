@@ -42,16 +42,26 @@ public class HomeController {
 		return "index";
 	}
 
+	@GetMapping("/habitaciones")
+    public String habitaciones() {
+        return "habitaciones";
+    }
+
+    @GetMapping("/servicios")
+    public String servicios() {
+        return "servicios";
+    }
+
+    @GetMapping("/quienes-somos")
+    public String quienesSomos() {
+        return "quienes-somos";
+    }
+	
+
 	@GetMapping("/register")
 	public String register() {
 
 		return "register";
-	}
-
-	@GetMapping("/user/home")
-	public String home() {
-
-		return "home";
 	}
 
 	@GetMapping("/signin")
