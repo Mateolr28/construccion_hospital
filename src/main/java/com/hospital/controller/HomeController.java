@@ -56,6 +56,10 @@ public class HomeController {
     public String quienesSomos() {
         return "quienes-somos";
     }
+	@GetMapping("/empleado")
+    public String empleado() {
+        return "empleado";
+    }
 	
 
 	@GetMapping("/register")

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Empleados</title>
+</head>
+<body>
+    <h1>Gestión de Empleados</h1>
+
+    <!-- Formulario para guardar un empleado -->
+    <h2>Guardar Empleado</h2>
+    <form action="/api/empleados/guardar" method="post">
+        <label for="codigo">Código:</label>
+        <input type="text" id="codigo" name="codigo"><br><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido"><br><br>
+
+        <label for="cargo">Cargo:</label>
+        <input type="text" id="cargo" name="cargo"><br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono"><br><br>
+
+        <label for="correo">Correo:</label>
+        <input type="text" id="correo" name="correo"><br><br>
+
+        <button type="submit">Guardar Empleado</button>
+    </form>
+
+    <!-- Formulario para buscar un empleado por código -->
+    <h2>Buscar Empleado</h2>
+    <form action="/api/empleados/buscar/{codigo}" method="get">
+        <label for="codigoBuscar">Código:</label>
+        <input type="text" id="codigoBuscar" name="codigo"><br><br>
+        <button type="submit">Buscar Empleado</button>
+    </form>
+
+    <!-- Formulario para actualizar un empleado -->
+    <h2>Actualizar Empleado</h2>
+    <form action="/api/empleados/actualizar" method="post">
+        <label for="codigoActualizar">Código:</label>
+        <input type="text" id="codigoActualizar" name="codigo"><br><br>
+
+        <label for="nombreActualizar">Nombre:</label>
+        <input type="text" id="nombreActualizar" name="nombre"><br><br>
+
+        <label for="apellidoActualizar">Apellido:</label>
+        <input type="text" id="apellidoActualizar" name="apellido"><br><br>
+
+        <label for="cargoActualizar">Cargo:</label>
+        <input type="text" id="cargoActualizar" name="cargo"><br><br>
+
+        <label for="telefonoActualizar">Teléfono:</label>
+        <input type="text" id="telefonoActualizar" name="telefono"><br><br>
+
+        <label for="correoActualizar">Correo:</label>
+        <input type="text" id="correoActualizar" name="correo"><br><br>
+
+        <button type="submit">Actualizar Empleado</button>
+    </form>
+
+    <!-- Formulario para eliminar un empleado -->
+    <h2>Eliminar Empleado</h2>
+    <form action="/api/empleados/eliminar/{id}" method="post">
+        <label for="idEliminar">ID del Empleado:</label>
+        <input type="text" id="idEliminar" name="id"><br><br>
+        <button type="submit">Eliminar Empleado</button>
+    </form>
+
+    <!-- Listar todos los empleados -->
+    <h2>Listar Todos los Empleados</h2>
+    <form action="/api/empleados/todos" method="get">
+        <button type="submit">Ver Empleados</button>
+    </form>
+
+</body>
+</html>
