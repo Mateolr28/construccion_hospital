@@ -1,65 +1,50 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Register Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <style>
-            body {
-                background-color: #a9dcff;
-            }
-    
-            .navbar-custom {
-                background-color: #44b3ff;
-            }
-    
-            .navbar-custom .navbar-brand,
-            .navbar-custom .nav-link {
-                color: white;
-            }
-        </style>
-    </head>
-    
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-custom">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">User Management</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <style>
+        body {
+            background-color: #a9dcff;
+        }
 
-=======
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-    th:replace="~{base::layout(~{::section})}">
-<head>
-    <meta charset="UTF-8">
-    <title>Register Page</title>
+        .navbar-custom {
+            background-color: #44b3ff;
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
->>>>>>> 0705ce16db8e6ca476349ca672b8cf488c131617
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">User Management</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <section>
         <div class="container p-3">
             <div class="row">
                 <div class="col-md-6 offset-md-3">
                     <div class="card">
                         <div class="card-header text-center fs-4">Register Page</div>
-<<<<<<< HEAD
 
-=======
-                        
-                        <!-- Mostrar mensaje de éxito al registrar -->
->>>>>>> 0705ce16db8e6ca476349ca672b8cf488c131617
                         <th:block th:if="${session.msg}">
                             <p class="text-center text-success fs-4">[[${session.msg}]]</p>
                             <th:block th:text="${@userServiceImpl.removeSessionMessage()}"></th:block>
@@ -80,35 +65,20 @@
                                     <input type="number" class="form-control" id="mobile" name="mobileNo">
                                 </div>
                                 <div class="mb-3">
-<<<<<<< HEAD
-                                    <label class="form-label">
-                                        Password</label>
-                                        <input type="password" class="form-control" id="password" name="password">
-                                    </div>
-                                    <button type="submit" class="btn btn-primary col-md-12">Register</button>
-                                </form>
-                            </div>
-=======
                                     <label class="form-label">Password</label>
                                     <input type="password" class="form-control" id="password" name="password">
                                 </div>
                                 <button type="submit" class="btn btn-primary col-md-12">Register</button>
                             </form>
->>>>>>> 0705ce16db8e6ca476349ca672b8cf488c131617
                         </div>
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
-        </section>
-    
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    </body>
-    </html>
-=======
         </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 </html>
->>>>>>> 0705ce16db8e6ca476349ca672b8cf488c131617

@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <meta charset="UTF-8">
     <title>Login Page</title>
@@ -21,17 +19,9 @@
             color: white;
         }
     </style>
-=======
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-    th:replace="~{base::layout(~{::section})}">
-<head>
-    <meta charset="UTF-8">
-    <title>Login Page</title>
->>>>>>> 0705ce16db8e6ca476349ca672b8cf488c131617
 </head>
 
 <body>
-<<<<<<< HEAD
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">User Management</a>
@@ -48,19 +38,17 @@
         </div>
     </nav>
 
-=======
->>>>>>> 0705ce16db8e6ca476349ca672b8cf488c131617
     <section>
         <div class="container p-3">
             <div class="row">
                 <div class="col-md-6 offset-md-3">
                     <div class="card">
                         <div class="card-header text-center fs-4">Login Page</div>
-<<<<<<< HEAD
 
                         <th:block th:if="${param.error}">
                             <p class="text-center text-danger fs-5">
-                                [[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
+                                [[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]
+                            </p>
                         </th:block>
 
                         <th:block th:if="${param.logout}">
@@ -90,38 +78,4 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
-=======
-                        
-                        <!-- Mostrar error de login -->
-                        <th:block th:if="${param.error}">
-                            <p class="text-center text-danger fs-5">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
-                        </th:block>
-                        
-                        <!-- Mostrar mensaje de logout -->
-                        <th:block th:if="${param.logout}">
-                            <p class="text-center text-danger fs-5">Logout Successfully.</p>
-                        </th:block>
-
-                        <div class="card-body">
-                            <form action="userLogin" method="post">
-                                <div class="mb-3">
-                                    <label class="form-label">Enter Email</label>
-                                    <input type="email" class="form-control" id="email" name="username">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="password" name="password">
-                                </div>
-                                <button type="submit" class="btn btn-primary col-md-12">Login</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</body>
-</html>
->>>>>>> 0705ce16db8e6ca476349ca672b8cf488c131617
