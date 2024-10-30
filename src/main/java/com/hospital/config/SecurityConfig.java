@@ -39,14 +39,17 @@ public class SecurityConfig {
 	///SecurityFilter chain configuration. it is an interface.
 	
 	@Bean
-	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-		
-		http.csrf().disable()
-		.authorizeHttpRequests().requestMatchers("/","/habitaciones","/empleado","/quienes-somos","/servicios","/register","/signin","/saveUser").permitAll()
-		.requestMatchers("/user/**").authenticated().and()
-		.formLogin().loginPage("/signin").loginProcessingUrl("/userLogin")
-		//.usernameParameter("email")
-		.defaultSuccessUrl("/user/profile").permitAll();
-		return http.build();
-	}
+SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+    http.csrf().disable()
+        .authorizeHttpRequests()
+            .requestMatchers("/", "/habitaciones", "/empleado", "/quienes-somos", "/servicios", "/register", "/signin", "/saveUser", "/api/empleados/guardar", "/api/empleados/actualizar","/api/empleados/todos","/api/empleados/buscar/","/api/empleados/eliminar/${id}").permitAll() // Aquí permite el acceso
+            .requestMatchers("/user/**").authenticated()
+        .and()
+        .formLogin()
+            .loginPage("/signin")
+            .loginProcessingUrl("/userLogin")
+            .defaultSuccessUrl("/user/profile")
+            .permitAll();
+    return http.build();
+}
 }

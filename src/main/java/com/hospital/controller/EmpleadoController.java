@@ -32,9 +32,10 @@ public class EmpleadoController {
     }
 
     @DeleteMapping("/eliminar/{id}")
-    public void eliminarEmpleado(@PathVariable Long id) {
-        empleadoService.eliminarEmpleado(id);
-    }
+public ResponseEntity<Void> eliminarEmpleado(@PathVariable Long id) {
+    empleadoService.eliminarEmpleado(id);
+    return ResponseEntity.noContent().build(); // Devuelve 204 No Content al eliminar exitosamente
+}
 
     @GetMapping("/todos")
     public List<Empleado> obtenerTodosLosEmpleados() {
