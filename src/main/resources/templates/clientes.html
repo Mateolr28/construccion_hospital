@@ -9,30 +9,58 @@
         body {
             background-color: #f8f9fa;
         }
+        .navbar {
+            background-color: #007bff;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
         .container {
             margin-top: 20px;
         }
-        table {
-            background-color: #ffffff;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        th {
+        .footer {
             background-color: #007bff;
             color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .table th {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn {
+            transition: background-color 0.3s;
+        }
+        .btn-warning:hover {
+            background-color: #e0a800;
+        }
+        .btn-danger:hover {
+            background-color: #c82333;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">Hospital Management</a>
-            <div class="collapse navbar-collapse">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="/clientes">Clientes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/empleados">Empleados</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/habitaciones}">Habitaciones</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/servicios}">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/quienes-somos}">Quienes somos</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/empleado}">Empleado</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/clientes}">Cliente</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/articulos}">Articulos</a></li>
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/register}">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/signin}">Login</a></li>
                 </ul>
             </div>
         </div>
