@@ -42,7 +42,7 @@ public class SecurityConfig {
 SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
     http.csrf().disable()
         .authorizeHttpRequests()
-            .requestMatchers("/", "/habitaciones", "/empleado", "/quienes-somos", "/servicios", "/register", "/signin", "/saveUser", "/api/empleados/guardar", "/api/empleados/actualizar","/api/empleados/todos","/api/empleados/buscar/","/api/empleados/eliminar/${id}").permitAll() // Aquí permite el acceso
+            .requestMatchers("/","/habitaciones","/clientes","/editar_clientes","/articulos","/empleado", "/quienes-somos", "/servicios", "/register", "/signin", "/saveUser", "/api/empleados/guardar", "/api/empleados/actualizar","/api/empleados/todos","/api/empleados/buscar/","/api/empleados/eliminar/${id}","/clientes/guardar","/clientes/editar/{id}","/clientes/eliminar/{id}","/clientes/actualizar","/articulos/guardar").permitAll() // Aquí permite el acceso
             .requestMatchers("/user/**").authenticated()
         .and()
         .formLogin()
